@@ -475,7 +475,7 @@
 			\end{minipage}			
 		\par
 		\vspace{2mm}
-		\divider \par
+		% \divider \par
 	\end{minipage}
 		
 }
@@ -496,6 +496,21 @@
 		\space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{emphasis}}\ratingmarker}} \par%
 	\vspace{-0.8em}
 	\divider
+}
+
+\newcommand{\legend}[3]{%
+	\vspace{-1.2em} \par
+        \techit{\textbf{#1}}\hfill
+        \small{
+	\foreach \x in {1,...,5}{%
+		\space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{emphasis}}\ratingmarker}}
+    }\par%
+        \textcolor{accent!85}{\hdashrule{\textwidth}{1.5pt}{0.5ex}}
+        \begin{minipage}[t]{\textwidth}
+            % \vspace{1mm}
+            \small{\textcolor{text}{\textbf{#3}}}
+        \end{minipage} \par
+	\vspace{2em}
 }
 
 \AtBeginDocument{%
